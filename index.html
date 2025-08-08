@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>باحث - منصة التحقيق والاستقصاء</title>
+  <title>بحّاث - منصة التحقيق الاستقصائي والـ OSINT</title>
   <style>
     /* Reset */
     * {
-      margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif;
     }
     body {
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: #e0e6f0;
+      background: #121212;
+      color: #f0f0f0;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
@@ -28,14 +28,14 @@
       justify-content: space-between;
       align-items: center;
       padding: 15px 0;
-      border-bottom: 1px solid #3b5360;
+      border-bottom: 1px solid #2c2c2c;
       position: relative;
     }
     header h1 {
       font-size: 2.2rem;
       font-weight: 900;
       letter-spacing: 3px;
-      color: #00b0ff;
+      color: #1ca7ec;
       cursor: default;
       user-select: none;
     }
@@ -45,7 +45,7 @@
       list-style: none;
     }
     nav ul li a {
-      color: #e0e6f0;
+      color: #f0f0f0;
       font-weight: 600;
       font-size: 1.1rem;
       text-decoration: none;
@@ -55,8 +55,8 @@
     }
     nav ul li a:hover,
     nav ul li a.active {
-      background: #00b0ff;
-      color: #0f2027;
+      background: #55b6f5;
+      color: #121212;
       outline: none;
     }
 
@@ -65,20 +65,20 @@
       display: none;
       cursor: pointer;
       font-size: 1.8rem;
-      color: #00b0ff;
+      color: #1ca7ec;
     }
     @media (max-width: 768px) {
       nav ul {
         position: absolute;
         top: 60px;
         right: 0;
-        background: #0f2027;
+        background: #121212;
         flex-direction: column;
         width: 200px;
         border-radius: 8px;
         display: none;
         padding: 15px 0;
-        box-shadow: 0 5px 20px rgba(0,176,255,0.5);
+        box-shadow: 0 5px 20px rgba(28,167,236,0.5);
         z-index: 1000;
       }
       nav ul.show {
@@ -105,7 +105,7 @@
       font-weight: 900;
       margin-bottom: 20px;
       letter-spacing: 1.5px;
-      color: #00b0ff;
+      color: #1ca7ec;
       animation: fadeInDown 1s ease forwards;
       opacity: 0;
     }
@@ -113,7 +113,7 @@
       font-size: 1.2rem;
       max-width: 720px;
       margin: 0 auto 40px;
-      color: #a9bbd7;
+      color: #cfd8e5;
       line-height: 1.6;
       animation: fadeInUp 1s ease forwards;
       opacity: 0;
@@ -121,14 +121,14 @@
     }
     main button {
       padding: 15px 40px;
-      background: #00b0ff;
+      background: #1ca7ec;
       border: none;
       border-radius: 50px;
-      color: #0f2027;
+      color: #121212;
       font-weight: 700;
       font-size: 1.2rem;
       cursor: pointer;
-      box-shadow: 0 5px 15px rgba(0,176,255,0.6);
+      box-shadow: 0 5px 15px rgba(28,167,236,0.6);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       animation: fadeInUp 1s ease forwards;
       animation-delay: 0.8s;
@@ -136,7 +136,7 @@
     }
     main button:hover {
       transform: scale(1.05);
-      box-shadow: 0 8px 20px rgba(0,176,255,0.8);
+      box-shadow: 0 8px 20px rgba(85,182,245,0.8);
     }
 
     /* فيديو */
@@ -145,7 +145,7 @@
       max-width: 720px;
       border-radius: 16px;
       overflow: hidden;
-      box-shadow: 0 8px 30px rgba(0,176,255,0.5);
+      box-shadow: 0 8px 30px rgba(28,167,236,0.5);
       animation: fadeInScale 1s ease forwards;
       opacity: 0;
     }
@@ -163,7 +163,7 @@
       width: 100%;
     }
     .partners h3 {
-      color: #00b0ff;
+      color: #1ca7ec;
       font-weight: 800;
       margin-bottom: 20px;
       font-size: 2rem;
@@ -191,7 +191,7 @@
       filter: none;
       opacity: 1;
       transform: scale(1.1);
-      box-shadow: 0 8px 25px #00b0ffaa;
+      box-shadow: 0 8px 25px #1ca7ecaa;
       z-index: 10;
     }
 
@@ -202,7 +202,7 @@
       text-align: right;
     }
     .news-section h3 {
-      color: #00b0ff;
+      color: #1ca7ec;
       font-weight: 800;
       margin-bottom: 30px;
       font-size: 2rem;
@@ -214,23 +214,23 @@
       gap: 25px;
     }
     .news-card {
-      background: #162d3d;
+      background: #222;
       border-radius: 15px;
       padding: 20px;
-      box-shadow: 0 5px 20px rgba(0,176,255,0.3);
+      box-shadow: 0 5px 20px rgba(28,167,236,0.3);
       transition: transform 0.3s ease;
       cursor: pointer;
     }
     .news-card:hover {
       transform: translateY(-8px);
-      box-shadow: 0 15px 30px rgba(0,176,255,0.6);
+      box-shadow: 0 15px 30px rgba(28,167,236,0.6);
     }
     .news-card h4 {
-      color: #00b0ff;
+      color: #1ca7ec;
       margin-bottom: 15px;
     }
     .news-card p {
-      color: #b0c8e0;
+      color: #cfd8e5;
       font-size: 1rem;
       line-height: 1.5;
     }
@@ -242,7 +242,7 @@
       text-align: right;
     }
     .projects-section h3 {
-      color: #00b0ff;
+      color: #1ca7ec;
       font-weight: 800;
       margin-bottom: 30px;
       font-size: 2rem;
@@ -254,18 +254,18 @@
       gap: 20px;
     }
     .project-item {
-      background: #203a43;
+      background: #222;
       border-radius: 15px;
       display: flex;
       align-items: center;
       gap: 25px;
       padding: 20px;
-      box-shadow: 0 5px 20px rgba(0,176,255,0.3);
+      box-shadow: 0 5px 20px rgba(28,167,236,0.3);
       cursor: pointer;
       transition: background-color 0.3s ease;
     }
     .project-item:hover {
-      background-color: #00b0ff33;
+      background-color: #1ca7ec33;
     }
     .project-item img {
       width: 100px;
@@ -278,11 +278,11 @@
       flex: 1;
     }
     .project-item div h4 {
-      color: #00b0ff;
+      color: #1ca7ec;
       margin-bottom: 8px;
     }
     .project-item div p {
-      color: #b0c8e0;
+      color: #cfd8e5;
       font-size: 1rem;
       line-height: 1.3;
     }
@@ -291,15 +291,15 @@
     .contact-section {
       margin-top: 80px;
       max-width: 600px;
-      background: #162d3d;
+      background: #222;
       padding: 30px;
       border-radius: 15px;
-      box-shadow: 0 5px 20px rgba(0,176,255,0.3);
-      color: #b0c8e0;
+      box-shadow: 0 5px 20px rgba(28,167,236,0.3);
+      color: #cfd8e5;
       text-align: right;
     }
     .contact-section h3 {
-      color: #00b0ff;
+      color: #1ca7ec;
       margin-bottom: 20px;
       font-weight: 800;
       font-size: 2rem;
@@ -310,7 +310,7 @@
       margin-bottom: 5px;
       font-weight: 600;
       font-size: 1rem;
-      color: #c0d8ff;
+      color: #a6c9fa;
     }
     .contact-section input, 
     .contact-section textarea {
@@ -321,20 +321,26 @@
       margin-bottom: 15px;
       font-size: 1rem;
       resize: vertical;
+      background-color: #333;
+      color: #f0f0f0;
+    }
+    .contact-section input::placeholder,
+    .contact-section textarea::placeholder {
+      color: #7a8dbf;
     }
     .contact-section button {
-      background: #00b0ff;
-      color: #0f2027;
+      background: #1ca7ec;
+      color: #121212;
       font-weight: 700;
       padding: 15px 30px;
       border: none;
       border-radius: 50px;
       cursor: pointer;
-      box-shadow: 0 5px 15px rgba(0,176,255,0.6);
+      box-shadow: 0 5px 15px rgba(28,167,236,0.6);
       transition: background-color 0.3s ease;
     }
     .contact-section button:hover {
-      background-color: #008fd6;
+      background-color: #1586cb;
     }
 
     /* Footer */
@@ -345,27 +351,27 @@
       max-width: 1100px;
       display: flex;
       justify-content: space-between;
-      color: #8aa8cc;
-      border-top: 1px solid #1e304a;
+      color: #7289a1;
+      border-top: 1px solid #1b2738;
       font-size: 0.9rem;
     }
     footer div {
       max-width: 320px;
     }
     footer h4 {
-      color: #00b0ff;
+      color: #1ca7ec;
       margin-bottom: 12px;
       font-weight: 800;
     }
     footer a {
-      color: #8aa8cc;
+      color: #7289a1;
       text-decoration: none;
       display: block;
       margin-bottom: 6px;
       transition: color 0.3s ease;
     }
     footer a:hover {
-      color: #00b0ff;
+      color: #1ca7ec;
     }
 
     /* الرسوم المتحركة */
@@ -386,8 +392,8 @@
     #toast {
       visibility: hidden;
       min-width: 250px;
-      background-color: #00b0ffdd;
-      color: #0f2027;
+      background-color: #1ca7ecdd;
+      color: #121212;
       text-align: center;
       border-radius: 8px;
       padding: 16px;
@@ -396,7 +402,7 @@
       right: 30px;
       bottom: 30px;
       font-weight: 700;
-      box-shadow: 0 5px 20px rgba(0,176,255,0.7);
+      box-shadow: 0 5px 20px rgba(28,167,236,0.7);
       transition: visibility 0s linear 0.3s, opacity 0.3s ease-in-out;
       opacity: 0;
     }
@@ -408,181 +414,697 @@
   </style>
 </head>
 <body>
+  <header>
+    <h1>بحّاث</h1>
+    <nav>
+      <div id="menu-toggle">☰</div>
+      <ul id="menu">
+        <li><a href="#" class="active">الرئيسية</a></li>
+        <li><a href="#news">آخر الأخبار</a></li>
+        <li><a href="#projects">المشاريع</a></li>
+        <li><a href="#contact">تواصل معنا</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<header>
-  <h1>باحث</h1>
-  <nav>
-    <div id="menu-toggle">☰</div>
-    <ul id="menu">
-      <li><a href="#" class="active">الرئيسية</a></li>
-      <li><a href="#news">آخر الأخبار</a></li>
-      <li><a href="#projects">المشاريع</a></li>
-      <li><a href="#contact">تواصل معنا</a></li>
-    </ul>
-  </nav>
-</header>
+  <main>
+    <h2>التحقيق الاستقصائي والـ OSINT بطريقة حديثة</h2>
+    <p>مرحباً بك في منصة <strong>بحّاث</strong> حيث نقدم أدوات ومشاريع استقصائية حديثة تعزز حرية الصحافة والشفافية.</p>
+    <button id="explore-btn">استكشف المنصة</button>
 
-<main>
-  <h2>التحقيق الاستقصائي والـ OSINT بطريقة حديثة</h2>
-  <p>مرحباً بك في منصة باحث حيث نقدم أدوات ومشاريع استقصائية حديثة تعزز حرية الصحافة والشفافية.</p>
-  <button onclick="alert('أهلاً بك في باحث! المزيد قادم قريباً...')">استكشف المنصة</button>
-
-  <div class="video-container" style="margin-top: 50px;">
-    <iframe src="https://www.youtube.com/embed/ojFP0w5yanM" allowfullscreen></iframe>
-  </div>
-
-  <section class="partners">
-    <h3>شركاؤنا</h3>
-    <div class="partners-logos">
-      <img src="assets/logo1.png" alt="شريك 1" />
-      <img src="assets/logo2.png" alt="شريك 2" />
-      <img src="assets/logo3.png" alt="شريك 3" />
-      <img src="assets/logo4.png" alt="شريك 4" />
+    <div class="video-container" style="margin-top: 60px;">
+      <iframe 
+        src="https://www.youtube.com/embed/ojFP0w5yanM" 
+        title="فيديو تعريفي منصة بحّاث"
+        allowfullscreen
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      ></iframe>
     </div>
-  </section>
 
-  <section id="news" class="news-section">
-    <h3>آخر الأخبار</h3>
-    <div class="news-cards" id="news-cards">
-      <!-- الأخبار ستضاف ديناميكياً -->
-    </div>
-  </section>
-
-  <section id="projects" class="projects-section">
-    <h3>المشاريع الجارية</h3>
-    <div class="projects-list" id="projects-list">
-      <!-- المشاريع ستضاف ديناميكياً -->
-    </div>
-  </section>
-
-  <section id="contact" class="contact-section">
-    <h3>تواصل معنا</h3>
-    <form id="contact-form">
-      <label for="name">الاسم الكامل</label>
-      <input type="text" id="name" name="name" placeholder="ادخل اسمك" required />
-
-      <label for="email">البريد الإلكتروني</label>
-      <input type="email" id="email" name="email" placeholder="ادخل بريدك" required />
-
-      <label for="message">رسالتك</label>
-      <textarea id="message" name="message" rows="4" placeholder="اكتب رسالتك هنا..." required></textarea>
-
-      <button type="submit">إرسال</button>
-    </form>
-  </section>
-</main>
-
-<footer>
-  <div>
-    <h4>روابط مهمة</h4>
-    <a href="#">الرئيسية</a>
-    <a href="#news">آخر الأخبار</a>
-    <a href="#projects">المشاريع</a>
-    <a href="#contact">تواصل معنا</a>
-  </div>
-  <div>
-    <h4>تواصل معنا</h4>
-    <p>البريد الإلكتروني: info@ba7ath.com</p>
-    <p>الهاتف: +216 00 000 000</p>
-  </div>
-  <div>
-    <h4>تابعنا</h4>
-    <a href="#" target="_blank">فيسبوك</a>
-    <a href="#" target="_blank">تويتر</a>
-    <a href="#" target="_blank">إنستغرام</a>
-  </div>
-</footer>
-
-<!-- إشعارات تفاعلية -->
-<div id="toast"></div>
-
-<script>
-  // قائمة منبثقة للموبايل
-  const menuToggle = document.getElementById('menu-toggle');
-  const menu = document.getElementById('menu');
-  menuToggle.addEventListener('click', () => {
-    menu.classList.toggle('show');
-  });
-
-  // تفعيل الرابط النشط
-  const links = document.querySelectorAll('nav ul li a');
-  links.forEach(link => {
-    link.addEventListener('click', () => {
-      links.forEach(l => l.classList.remove('active'));
-      link.classList.add('active');
-      if (menu.classList.contains('show')) menu.classList.remove('show');
-    });
-  });
-
-  // بيانات وهمية للأخبار
-  const newsData = [
-    {title: "تحقيق جديد عن الفساد المالي", desc: "نقدم لكم تقريراً جديداً حول عمليات فساد معقدة في القطاع المالي.", link:"#"},
-    {title: "تحديث أداة OSINT", desc: "إصدار جديد من أداة OSINT يتيح المزيد من المميزات.", link:"#"},
-    {title: "ندوة حول الصحافة الاستقصائية", desc: "انضم إلى ندوة مباشرة مع خبراء التحقيق الصحفي.", link:"#"}
-  ];
-
-  // بيانات وهمية للمشاريع
-  const projectsData = [
-    {title: "مشروع تتبع التمويلات الخارجية", desc: "تتبع الأموال التي تدخل إلى السوق المحلية وتأثيرها.", img: "assets/project1.jpg"},
-    {title: "مبادرة التحقق من الأخبار", desc: "برنامج لفحص صحة الأخبار المنتشرة على وسائل التواصل.", img: "assets/project2.jpg"},
-    {title: "مشروع التوثيق المفتوح", desc: "تجميع وثائق ووثائق مسربة وتحليلها.", img: "assets/project3.jpg"}
-  ];
-
-  // إضافة الأخبار ديناميكياً
-  const newsContainer = document.getElementById('news-cards');
-  newsData.forEach(item => {
-    const card = document.createElement('div');
-    card.classList.add('news-card');
-    card.innerHTML = `
-      <h4>${item.title}</h4>
-      <p>${item.desc}</p>
-      <a href="${item.link}" style="color:#00b0ff; text-decoration:none;">اقرأ المزيد</a>
-    `;
-    newsContainer.appendChild(card);
-  });
-
-  // إضافة المشاريع ديناميكياً
-  const projectsContainer = document.getElementById('projects-list');
-  projectsData.forEach(item => {
-    const project = document.createElement('div');
-    project.classList.add('project-item');
-    project.innerHTML = `
-      <img src="${item.img}" alt="${item.title}" />
-      <div>
-        <h4>${item.title}</h4>
-        <p>${item.desc}</p>
+    <section class="partners" aria-label="شركاؤنا">
+      <h3>شركاؤنا</h3>
+      <div class="partners-logos">
+        <img src="assets/logo1.png" alt="شريك 1" />
+        <img src="assets/logo2.png" alt="شريك 2" />
+        <img src="assets/logo3.png" alt="شريك 3" />
+        <img src="assets/logo4.png" alt="شريك 4" />
       </div>
-    `;
-    projectsContainer.appendChild(project);
-  });
+    </section>
 
-  // نموذج تواصل مع تحقق بسيط + إشعار toast
-  const form = document.getElementById('contact-form');
-  const toast = document.getElementById('toast');
+    <section class="news-section" id="news" aria-label="آخر الأخبار">
+      <h3>آخر الأخبار</h3>
+      <div class="news-cards">
+        <article class="news-card" tabindex="0">
+          <h4>إطلاق النسخة الجديدة من منصة بحّاث</h4>
+          <p>تم إطلاق نسخة محسّنة توفر أدوات متقدمة للتحقيق والبحث في البيانات.</p>
+        </article>
+        <article class="news-card" tabindex="0">
+          <h4>ورشات تدريبية قادمة</h4>
+          <p>سلسلة ورش عمل لتعلم مهارات OSINT والتحقيق الاستقصائي عن بُعد.</p>
+        </article>
+        <article class="news-card" tabindex="0">
+          <h4>مشروع مشترك جديد</h4>
+          <p>انطلاق مشروع تحقيقات تعاوني مع صحفيين مستقلين من المنطقة.</p>
+        </article>
+      </div>
+    </section>
 
-  form.addEventListener('submit', e => {
-    e.preventDefault();
-    // تحقق بسيط
-    const name = form.name.value.trim();
-    const email = form.email.value.trim();
-    const message = form.message.value.trim();
-    if (name && email && message) {
-      showToast(`شكراً لك، ${name}! تم استلام رسالتك.`);
-      form.reset();
-    } else {
-      showToast("يرجى تعبئة جميع الحقول.", true);
+    <section class="projects-section" id="projects" aria-label="المشاريع">
+      <h3>المشاريع الحالية</h3>
+      <div class="projects-list">
+        <div class="project-item" tabindex="0">
+          <img src="assets/project1.jpg" alt="مشروع 1" />
+          <div>
+            <h4>تحقيق حول الفساد في قطاع الطاقة</h4>
+            <p>مشروع يهدف إلى كشف ملفات فساد ضخمة بالتعاون مع فريق بحثي متعدد التخصصات.</p>
+          </div>
+        </div>
+        <div class="project-item" tabindex="0">
+          <img src="assets/project2.jpg" alt="مشروع 2" />
+          <div>
+            <h4>رصد الأخبار الزائفة</h4>
+            <p>منصة للكشف عن الأخبار المزيفة وتأثيرها في الرأي العام.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact" aria-label="تواصل معنا">
+      <h3>تواصل معنا</h3>
+      <form id="contact-form">
+        <label for="name">الاسم</label>
+        <input type="text" id="name" name="name" placeholder="اسمك الكامل" required />
+        <label for="email">البريد الإلكتروني</label>
+        <input type="email" id="email" name="email" placeholder="البريد الإلكتروني" required />
+        <label for="message">رسالتك</label>
+        <textarea id="message" name="message" rows="5" placeholder="اكتب رسالتك هنا..." required></textarea>
+        <button type="submit">إرسال</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div>
+      <h4>بحّاث</h4>
+      <p>حقوق النشر © 2025 منصة بحّاث. جميع الحقوق محفوظة.</p>
+    </div>
+    <div>
+      <h4>روابط مهمة</h4>
+      <a href="#">الأسئلة الشائعة</a>
+      <a href="#">شروط الاستخدام</a>
+      <a href="#">سياسة الخصوصية</a>
+    </div>
+    <div>
+      <h4>تواصل معنا</h4>
+      <a href="mailto:contact@ba7ath.tn">contact@ba7ath.tn</a>
+      <a href="#">فيسبوك</a>
+      <a href="#">تويتر</a>
+      <a href="#">لينكدإن</a>
+    </div>
+  </footer>
+
+  <div id="toast">تم إرسال الرسالة بنجاح!</div>
+
+  <script>
+    // تفعيل زر القائمة في الموبايل
+    const menuToggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+    menuToggle.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
+
+    // زر استكشاف المنصة
+    document.getElementById('explore-btn').addEventListener('click', () => {
+      alert('مرحباً بك في منصة بحّاث! تابع أحدث التحقيقات والمشاريع.');
+    });
+
+    // نموذج التواصل
+    const contactForm = document.getElementById('contact-form');
+    const toast = document.getElementById('toast');
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      // يمكن إضافة هنا كود إرسال البيانات فعلياً عبر AJAX أو API
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 3000);
+      contactForm.reset();
+    });
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>بحّاث - منصة التحقيق الاستقصائي والـ OSINT</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif;
     }
-  });
+    body {
+      background: #121212;
+      color: #f0f0f0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 20px;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+    header {
+      width: 100%;
+      max-width: 1100px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+      border-bottom: 1px solid #2c2c2c;
+      position: relative;
+    }
+    header h1 {
+      font-size: 2.2rem;
+      font-weight: 900;
+      letter-spacing: 3px;
+      color: #1ca7ec;
+      cursor: default;
+      user-select: none;
+    }
+    nav ul {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+    }
+    nav ul li a {
+      color: #f0f0f0;
+      font-weight: 600;
+      font-size: 1.1rem;
+      text-decoration: none;
+      padding: 8px 15px;
+      border-radius: 8px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    nav ul li a:hover,
+    nav ul li a.active {
+      background: #55b6f5;
+      color: #121212;
+      outline: none;
+    }
 
-  function showToast(message, isError = false) {
-    toast.textContent = message;
-    toast.style.backgroundColor = isError ? '#ff4b4bdd' : '#00b0ffdd';
-    toast.classList.add('show');
-    setTimeout(() => {
-      toast.classList.remove('show');
-    }, 3500);
-  }
-</script>
+    /* زر القائمة للموبايل */
+    #menu-toggle {
+      display: none;
+      cursor: pointer;
+      font-size: 1.8rem;
+      color: #1ca7ec;
+    }
+    @media (max-width: 768px) {
+      nav ul {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #121212;
+        flex-direction: column;
+        width: 200px;
+        border-radius: 8px;
+        display: none;
+        padding: 15px 0;
+        box-shadow: 0 5px 20px rgba(28,167,236,0.5);
+        z-index: 1000;
+      }
+      nav ul.show {
+        display: flex;
+      }
+      nav ul li {
+        margin: 8px 0;
+        text-align: center;
+      }
+      #menu-toggle {
+        display: block;
+      }
+    }
 
+    main {
+      width: 100%;
+      max-width: 1100px;
+      margin-top: 50px;
+      text-align: center;
+      padding: 0 20px;
+    }
+    main h2 {
+      font-size: 2.5rem;
+      font-weight: 900;
+      margin-bottom: 20px;
+      letter-spacing: 1.5px;
+      color: #1ca7ec;
+      animation: fadeInDown 1s ease forwards;
+      opacity: 0;
+    }
+    main p {
+      font-size: 1.2rem;
+      max-width: 720px;
+      margin: 0 auto 40px;
+      color: #cfd8e5;
+      line-height: 1.6;
+      animation: fadeInUp 1s ease forwards;
+      opacity: 0;
+      animation-delay: 0.5s;
+    }
+    main button {
+      padding: 15px 40px;
+      background: #1ca7ec;
+      border: none;
+      border-radius: 50px;
+      color: #121212;
+      font-weight: 700;
+      font-size: 1.2rem;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(28,167,236,0.6);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeInUp 1s ease forwards;
+      animation-delay: 0.8s;
+      opacity: 0;
+    }
+    main button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(85,182,245,0.8);
+    }
+
+    /* فيديو */
+    .video-container {
+      margin: 60px auto;
+      max-width: 720px;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 30px rgba(28,167,236,0.5);
+      animation: fadeInScale 1s ease forwards;
+      opacity: 0;
+    }
+    iframe {
+      width: 100%;
+      height: 405px;
+      border: none;
+      display: block;
+    }
+
+    /* شركاء */
+    .partners {
+      margin-top: 80px;
+      max-width: 1100px;
+      width: 100%;
+    }
+    .partners h3 {
+      color: #1ca7ec;
+      font-weight: 800;
+      margin-bottom: 20px;
+      font-size: 2rem;
+      text-align: center;
+      letter-spacing: 1.5px;
+    }
+    .partners-logos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(140px,1fr));
+      gap: 35px;
+      justify-items: center;
+      align-items: center;
+    }
+    .partners-logos img {
+      max-height: 80px;
+      filter: grayscale(80%);
+      opacity: 0.7;
+      transition: all 0.4s ease;
+      cursor: pointer;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+      animation: fadeInUp 0.7s ease forwards;
+    }
+    .partners-logos img:hover {
+      filter: none;
+      opacity: 1;
+      transform: scale(1.1);
+      box-shadow: 0 8px 25px #1ca7ecaa;
+      z-index: 10;
+    }
+
+    /* قسم الأخبار */
+    .news-section {
+      margin-top: 80px;
+      max-width: 1100px;
+      text-align: right;
+    }
+    .news-section h3 {
+      color: #1ca7ec;
+      font-weight: 800;
+      margin-bottom: 30px;
+      font-size: 2rem;
+      letter-spacing: 1.5px;
+    }
+    .news-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+      gap: 25px;
+    }
+    .news-card {
+      background: #222;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 5px 20px rgba(28,167,236,0.3);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    .news-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 30px rgba(28,167,236,0.6);
+    }
+    .news-card h4 {
+      color: #1ca7ec;
+      margin-bottom: 15px;
+    }
+    .news-card p {
+      color: #cfd8e5;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    /* قسم المشاريع */
+    .projects-section {
+      margin-top: 80px;
+      max-width: 1100px;
+      text-align: right;
+    }
+    .projects-section h3 {
+      color: #1ca7ec;
+      font-weight: 800;
+      margin-bottom: 30px;
+      font-size: 2rem;
+      letter-spacing: 1.5px;
+    }
+    .projects-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .project-item {
+      background: #222;
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      padding: 20px;
+      box-shadow: 0 5px 20px rgba(28,167,236,0.3);
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .project-item:hover {
+      background-color: #1ca7ec33;
+    }
+    .project-item img {
+      width: 100px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .project-item div {
+      text-align: right;
+      flex: 1;
+    }
+    .project-item div h4 {
+      color: #1ca7ec;
+      margin-bottom: 8px;
+    }
+    .project-item div p {
+      color: #cfd8e5;
+      font-size: 1rem;
+      line-height: 1.3;
+    }
+
+    /* نموذج التواصل */
+    .contact-section {
+      margin-top: 80px;
+      max-width: 600px;
+      background: #222;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(28,167,236,0.3);
+      color: #cfd8e5;
+      text-align: right;
+    }
+    .contact-section h3 {
+      color: #1ca7ec;
+      margin-bottom: 20px;
+      font-weight: 800;
+      font-size: 2rem;
+      letter-spacing: 1.5px;
+    }
+    .contact-section label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 600;
+      font-size: 1rem;
+      color: #a6c9fa;
+    }
+    .contact-section input, 
+    .contact-section textarea {
+      width: 100%;
+      padding: 10px 15px;
+      border-radius: 8px;
+      border: none;
+      margin-bottom: 15px;
+      font-size: 1rem;
+      resize: vertical;
+      background-color: #333;
+      color: #f0f0f0;
+    }
+    .contact-section input::placeholder,
+    .contact-section textarea::placeholder {
+      color: #7a8dbf;
+    }
+    .contact-section button {
+      background: #1ca7ec;
+      color: #121212;
+      font-weight: 700;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(28,167,236,0.6);
+      transition: background-color 0.3s ease;
+    }
+    .contact-section button:hover {
+      background-color: #1586cb;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 90px;
+      padding: 30px 0;
+      width: 100%;
+      max-width: 1100px;
+      display: flex;
+      justify-content: space-between;
+      color: #7289a1;
+      border-top: 1px solid #1b2738;
+      font-size: 0.9rem;
+    }
+    footer div {
+      max-width: 320px;
+    }
+    footer h4 {
+      color: #1ca7ec;
+      margin-bottom: 12px;
+      font-weight: 800;
+    }
+    footer a {
+      color: #7289a1;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 6px;
+      transition: color 0.3s ease;
+    }
+    footer a:hover {
+      color: #1ca7ec;
+    }
+
+    /* الرسوم المتحركة */
+    @keyframes fadeInDown {
+      from {opacity: 0; transform: translateY(-40px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    @keyframes fadeInUp {
+      from {opacity: 0; transform: translateY(40px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    @keyframes fadeInScale {
+      from {opacity: 0; transform: scale(0.85);}
+      to {opacity: 1; transform: scale(1);}
+    }
+
+    /* Toast notification */
+    #toast {
+      visibility: hidden;
+      min-width: 250px;
+      background-color: #1ca7ecdd;
+      color: #121212;
+      text-align: center;
+      border-radius: 8px;
+      padding: 16px;
+      position: fixed;
+      z-index: 9999;
+      right: 30px;
+      bottom: 30px;
+      font-weight: 700;
+      box-shadow: 0 5px 20px rgba(28,167,236,0.7);
+      transition: visibility 0s linear 0.3s, opacity 0.3s ease-in-out;
+      opacity: 0;
+    }
+    #toast.show {
+      visibility: visible;
+      opacity: 1;
+      transition-delay: 0s;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>بحّاث</h1>
+    <nav>
+      <div id="menu-toggle">☰</div>
+      <ul id="menu">
+        <li><a href="#" class="active">الرئيسية</a></li>
+        <li><a href="#news">آخر الأخبار</a></li>
+        <li><a href="#projects">المشاريع</a></li>
+        <li><a href="#contact">تواصل معنا</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>التحقيق الاستقصائي والـ OSINT بطريقة حديثة</h2>
+    <p>مرحباً بك في منصة <strong>بحّاث</strong> حيث نقدم أدوات ومشاريع استقصائية حديثة تعزز حرية الصحافة والشفافية.</p>
+    <button id="explore-btn">استكشف المنصة</button>
+
+    <div class="video-container" style="margin-top: 60px;">
+      <iframe 
+        src="https://www.youtube.com/embed/ojFP0w5yanM" 
+        title="فيديو تعريفي منصة بحّاث"
+        allowfullscreen
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      ></iframe>
+    </div>
+
+    <section class="partners" aria-label="شركاؤنا">
+      <h3>شركاؤنا</h3>
+      <div class="partners-logos">
+        <img src="assets/logo1.png" alt="شريك 1" />
+        <img src="assets/logo2.png" alt="شريك 2" />
+        <img src="assets/logo3.png" alt="شريك 3" />
+        <img src="assets/logo4.png" alt="شريك 4" />
+      </div>
+    </section>
+
+    <section class="news-section" id="news" aria-label="آخر الأخبار">
+      <h3>آخر الأخبار</h3>
+      <div class="news-cards">
+        <article class="news-card" tabindex="0">
+          <h4>إطلاق النسخة الجديدة من منصة بحّاث</h4>
+          <p>تم إطلاق نسخة محسّنة توفر أدوات متقدمة للتحقيق والبحث في البيانات.</p>
+        </article>
+        <article class="news-card" tabindex="0">
+          <h4>ورشات تدريبية قادمة</h4>
+          <p>سلسلة ورش عمل لتعلم مهارات OSINT والتحقيق الاستقصائي عن بُعد.</p>
+        </article>
+        <article class="news-card" tabindex="0">
+          <h4>مشروع مشترك جديد</h4>
+          <p>انطلاق مشروع تحقيقات تعاوني مع صحفيين مستقلين من المنطقة.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="projects-section" id="projects" aria-label="المشاريع">
+      <h3>المشاريع الحالية</h3>
+      <div class="projects-list">
+        <div class="project-item" tabindex="0">
+          <img src="assets/project1.jpg" alt="مشروع 1" />
+          <div>
+            <h4>تحقيق حول الفساد في قطاع الطاقة</h4>
+            <p>مشروع يهدف إلى كشف ملفات فساد ضخمة بالتعاون مع فريق بحثي متعدد التخصصات.</p>
+          </div>
+        </div>
+        <div class="project-item" tabindex="0">
+          <img src="assets/project2.jpg" alt="مشروع 2" />
+          <div>
+            <h4>رصد الأخبار الزائفة</h4>
+            <p>منصة للكشف عن الأخبار المزيفة وتأثيرها في الرأي العام.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact" aria-label="تواصل معنا">
+      <h3>تواصل معنا</h3>
+      <form id="contact-form">
+        <label for="name">الاسم</label>
+        <input type="text" id="name" name="name" placeholder="اسمك الكامل" required />
+        <label for="email">البريد الإلكتروني</label>
+        <input type="email" id="email" name="email" placeholder="البريد الإلكتروني" required />
+        <label for="message">رسالتك</label>
+        <textarea id="message" name="message" rows="5" placeholder="اكتب رسالتك هنا..." required></textarea>
+        <button type="submit">إرسال</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div>
+      <h4>بحّاث</h4>
+      <p>حقوق النشر © 2025 منصة بحّاث. جميع الحقوق محفوظة.</p>
+    </div>
+    <div>
+      <h4>روابط مهمة</h4>
+      <a href="#">الأسئلة الشائعة</a>
+      <a href="#">شروط الاستخدام</a>
+      <a href="#">سياسة الخصوصية</a>
+    </div>
+    <div>
+      <h4>تواصل معنا</h4>
+      <a href="mailto:contact@ba7ath.tn">contact@ba7ath.tn</a>
+      <a href="#">فيسبوك</a>
+      <a href="#">تويتر</a>
+      <a href="#">لينكدإن</a>
+    </div>
+  </footer>
+
+  <div id="toast">تم إرسال الرسالة بنجاح!</div>
+
+  <script>
+    // تفعيل زر القائمة في الموبايل
+    const menuToggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+    menuToggle.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
+
+    // زر استكشاف المنصة
+    document.getElementById('explore-btn').addEventListener('click', () => {
+      alert('مرحباً بك في منصة بحّاث! تابع أحدث التحقيقات والمشاريع.');
+    });
+
+    // نموذج التواصل
+    const contactForm = document.getElementById('contact-form');
+    const toast = document.getElementById('toast');
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      // يمكن إضافة هنا كود إرسال البيانات فعلياً عبر AJAX أو API
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 3000);
+      contactForm.reset();
+    });
+  </script>
 </body>
 </html>
