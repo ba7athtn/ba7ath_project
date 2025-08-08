@@ -32,12 +32,12 @@
     </iframe>
   </section>
 
-<section class="partners" aria-label="Partenaires Ba7ath">
-  <h2>Ils nous soutiennent</h2>
-  <div id="partners-logos" class="partners-logos">
-    <!-- Logos seront injectés ici par JS -->
-  </div>
-</section>
+  <section class="partners" aria-label="Partenaires Ba7ath">
+    <h2>Ils nous soutiennent</h2>
+    <div id="partners-logos" class="partners-logos">
+      <!-- Logos chargés dynamiquement ici -->
+    </div>
+  </section>
 
   <section id="guides" aria-label="Guides et méthodes">
     <h2>Guides & Méthodes</h2>
@@ -69,26 +69,7 @@
     </div>
   </div>
 </footer>
-<script>
-  const partners = [
-    { src: "assets/logo1.png", alt: "Logo Partenaire 1" },
-    { src: "assets/logo2.png", alt: "Logo Partenaire 2" },
-    { src: "assets/logo3.png", alt: "Logo Partenaire 3" },
-    { src: "assets/logo4.png", alt: "Logo Partenaire 4" },
-    { src: "assets/logo5.png", alt: "Logo Partenaire 5" },
-    { src: "assets/logo6.png", alt: "Logo Partenaire 6" }
-  ];
 
-  const container = document.getElementById("partners-logos");
-
-  partners.forEach(partner => {
-    const img = document.createElement("img");
-    img.src = partner.src;
-    img.alt = partner.alt;
-    img.classList.add("partner-logo");
-    container.appendChild(img);
-  });
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
