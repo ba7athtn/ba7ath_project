@@ -1,3 +1,6 @@
-document.getElementById('exploreBtn').addEventListener('click', () => {
-  alert("Bienvenue sur Ba7ath ! Bientôt plus de contenu dynamique ici.");
+const menuToggle = document.getElementById('menuToggle');
+const navLinks = document.querySelector('.nav-links');
+
+menuToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('open');
 });
