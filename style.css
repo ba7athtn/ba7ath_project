@@ -1,141 +1,95 @@
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* Background animé avec dégradé mouvant */
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
-/* Canvas fullscreen background */
-#background {
-  position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: -1;
-  background: #0a0a1a;
-}
-
-/* Container centered */
 body, html {
   height: 100%;
+  margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(-45deg, #1e3c72, #2a5298, #1e3c72, #14568a);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #fff;
+  color: white;
   text-align: center;
-  background: transparent;
-  overflow: hidden;
 }
 
 .container {
-  background: rgba(20, 20, 50, 0.75);
-  padding: 3rem 4rem;
-  border-radius: 20px;
-  box-shadow: 0 0 30px rgba(255, 255, 85, 0.7);
-  max-width: 550px;
-  animation: fadeSlideIn 2s ease forwards;
+  max-width: 500px;
+  padding: 20px;
+  background: rgba(0,0,0,0.4);
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  animation: fadeIn 2s ease forwards;
   opacity: 0;
-  transform: translateY(50px);
-  position: relative;
-  z-index: 1;
 }
 
-/* Logo */
 .logo {
   width: 120px;
-  margin-bottom: 25px;
-  animation: bounce 2s infinite ease-in-out;
-}
-
-/* Typewriter effect */
-.typewriter {
-  font-size: 3rem;
-  font-weight: 900;
-  margin-bottom: 15px;
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid #ffdd55; /* Cursor */
-  white-space: nowrap;
-  letter-spacing: .1em;
-  animation: typing 3s steps(22), blinkCursor 0.75s step-end infinite;
-}
-
-.typewriter span {
-  color: #ffdd55;
-}
-
-/* Fade in paragraph */
-.fade-in {
-  font-size: 1.3rem;
-  color: #ddd;
-  margin-bottom: 35px;
+  margin-bottom: 20px;
+  animation: slideDown 1.5s ease forwards;
   opacity: 0;
-  animation: fadeIn 2s 3.5s forwards;
 }
 
-/* Pulse animation button */
-button {
-  background: #ffdd55;
-  border: none;
-  padding: 15px 40px;
+h1 {
+  font-size: 2.8rem;
+  margin: 0 0 15px 0;
+  font-weight: 700;
+}
+
+h1 span {
+  color: #ffbb33;
+}
+
+p {
   font-size: 1.2rem;
-  border-radius: 40px;
-  font-weight: 800;
-  color: #222;
+  margin-bottom: 30px;
+  color: #eee;
+}
+
+button {
+  background: #ffbb33;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  border-radius: 30px;
   cursor: pointer;
-  box-shadow: 0 0 15px #ffdd55;
-  animation: pulse 2.5s infinite;
+  font-weight: 700;
+  color: #222;
+  box-shadow: 0 5px 15px rgba(255, 187, 51, 0.5);
   transition: background 0.3s ease, transform 0.3s ease;
 }
 
 button:hover {
-  background: #ffee88;
-  transform: scale(1.1);
-  box-shadow: 0 0 30px #ffee88;
+  background: #ffdd66;
+  transform: scale(1.05);
 }
 
-/* Animations */
+/* Animations keyframes */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
 
-/* Fade + slide in container */
-@keyframes fadeSlideIn {
+@keyframes slideDown {
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-/* Bounce logo */
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-15px);
-  }
-}
-
-/* Typewriter typing */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 14.5em } /* Adjust to text length */
-}
-
-/* Cursor blink */
-@keyframes blinkCursor {
-  50% { border-color: transparent }
-}
-
-/* Fade in paragraph */
-@keyframes fadeIn {
-  to { opacity: 1 }
-}
-
-/* Pulse button */
-@keyframes pulse {
-  0%, 100% {
-    box-shadow: 0 0 15px #ffdd55;
-  }
-  50% {
-    box-shadow: 0 0 40px #ffdd55;
-  }
+.logo {
+  transform: translateY(-30px);
 }
