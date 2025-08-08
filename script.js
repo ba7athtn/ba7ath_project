@@ -1,2 +1,3 @@
-// Tu peux ajouter ici des interactions plus tard
-console.log("Bienvenue sur Ba7ath !");
+document.getElementById('exploreBtn').addEventListener('click', () => {
+  alert("Bienvenue sur Ba7ath ! Bientôt plus de contenu dynamique ici.");
+});
